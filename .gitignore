@@ -58,3 +58,14 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+*.vsconfig
+GGJ2022/Library/Artifacts/
+GGJ2022/Library/PackageCache/
+GGJ2022/Library/ShaderCache/
+GGJ2022/Library/StateCache/
+GGJ2022/Logs/
+GGJ2022/obj/
+GGJ2022/Temp/
+GGJ2022/UserSettings/EditorUserSettings.asset
+GGJ2022/Library/ArtifactDB
+GGJ2022/Library/ArtifactDB-lock
