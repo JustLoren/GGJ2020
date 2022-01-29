@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using System.Linq;
 
 public class GameSystem : NetworkBehaviour
 {
@@ -32,6 +33,8 @@ public class GameSystem : NetworkBehaviour
     public void AddPlayer(uPlayer player)
     {
         players.Add(player);
+        if (players.Count > 1)
+            player.isInUtopia = !players[0].isInUtopia;
     }
 
     [Server]
@@ -47,13 +50,28 @@ public class GameSystem : NetworkBehaviour
                 if (players[0].isInUtopia)
                 {
                     players[0].isInUtopia = false;
-                    players[0].RpcMoveTo(players[0].netIdentity.connectionToClient, dystopiaSpot.position);
+                    players[0].RpcMoveTo(players[0].netIdentity.connectionToClient, dystopiaSpot.position, dystopiaSpot.rotation, players[0].cameraObject.localRotation);
                 } else
                 {
                     players[0].isInUtopia = true;
-                    players[0].RpcMoveTo(players[0].netIdentity.connectionToClient, utopiaSpot.position);
+                    players[0].RpcMoveTo(players[0].netIdentity.connectionToClient, utopiaSpot.position, utopiaSpot.rotation, players[0].cameraObject.localRotation);
                 }
+            } 
+            else
+            {
+                players[0].wantsToSwap = false;
+                players[1].wantsToSwap = false;
+
+                players[0].isInUtopia = !players[0].isInUtopia;
+                players[1].isInUtopia = !players[1].isInUtopia;
+
+                players[0].RpcMoveTo(players[0].netIdentity.connectionToClient, players[1].transform.position, players[1].transform.rotation, players[1].cameraObject.localRotation);
+                players[1].RpcMoveTo(players[1].netIdentity.connectionToClient, players[0].transform.position, players[0].transform.rotation, players[0].cameraObject.localRotation);
             }
+        } else
+        {
+            var otherPlayer = players.Where(p => p != player).Single();
+            otherPlayer.RpcNotifySwap(otherPlayer.netIdentity.connectionToClient);
         }
     }
 }

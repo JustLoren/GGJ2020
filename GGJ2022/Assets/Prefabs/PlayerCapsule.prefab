@@ -253,6 +253,7 @@ MonoBehaviour:
   CinemachineCameraTarget: {fileID: 4135013735270702863}
   TopClamp: 89
   BottomClamp: -89
+  movementFrozen: 0
 --- !u!114 &5420857361349278248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +270,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   interact: 0
+  swapPlaces: 0
   sprint: 0
   analogMovement: 0
   cursorLocked: 1
@@ -455,6 +457,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   inventory: {fileID: 1394503873444530463}
+  cameraObject: {fileID: 4135013735270702856}
+  wantsToSwap: 0
+  isInUtopia: 0
+  swapTooltip: The other player wants to swap! Press Q to swap.
 --- !u!114 &1394503873444530463
 MonoBehaviour:
   m_ObjectHideFlags: 0

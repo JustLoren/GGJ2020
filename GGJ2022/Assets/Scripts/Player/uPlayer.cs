@@ -8,6 +8,7 @@ public class uPlayer : NetworkBehaviour
     private ScanForInteractable scanner;
     private StarterAssets.StarterAssetsInputs input;
     public Inventory inventory;
+    public Transform cameraObject;
 
     private void Start()
     {
@@ -56,13 +57,22 @@ public class uPlayer : NetworkBehaviour
 
     public bool isInUtopia;
 
+    public string swapTooltip = "The other player wants to swap! Press Q to swap.";
+
     [TargetRpc]
-    public void RpcMoveTo(NetworkConnection target, Vector3 position)
+    public void RpcMoveTo(NetworkConnection target, Vector3 position, Quaternion rotation, Quaternion lookRotation)
     {
-        StartCoroutine(SwapRealities(position));
+        StartCoroutine(SwapRealities(position, rotation, lookRotation));
+        Tooltipper.Instance.HideTip(TooltipType.DesireSwap, swapTooltip);
     }
 
-    private IEnumerator SwapRealities(Vector3 position)
+    [TargetRpc]
+    public void RpcNotifySwap(NetworkConnection target)
+    {
+        Tooltipper.Instance.ShowTip(TooltipType.DesireSwap, swapTooltip);
+    }
+
+    private IEnumerator SwapRealities(Vector3 position, Quaternion rotation, Quaternion lookRotation)
     {
         UIFader.Instance.ShowCurtain();
         while (UIFader.Instance.enabled)
@@ -71,8 +81,9 @@ public class uPlayer : NetworkBehaviour
         Debug.Log($"Teleporting to {position}");
         var fps = this.GetComponent<StarterAssets.FirstPersonController>();
         fps.movementFrozen = true;
-        var nt = this.GetComponent<NetworkTransform>();
-        nt.CmdTeleport(position);
+        var nt = this.GetComponent<NetworkTransform>();        
+        nt.CmdTeleportAndRotate(position, rotation);
+        cameraObject.localRotation = lookRotation;
         //this.transform.position = position;                
         
         yield return new WaitForSeconds(.25f);
