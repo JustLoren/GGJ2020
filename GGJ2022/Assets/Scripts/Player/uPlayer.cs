@@ -29,7 +29,7 @@ public class uPlayer : NetworkBehaviour
 
             if (input.interact && scanner.target != null)
             {
-                CmdDoInteract(scanner.target.gameObject);                
+                CmdDoInteract(scanner.target.gameObject);
             }
 
             input.interact = false;
@@ -77,6 +77,12 @@ public class uPlayer : NetworkBehaviour
     public void RpcNotifySwap(NetworkConnection target)
     {
         Tooltipper.Instance.ShowTip(TooltipType.DesireSwap, swapTooltip);
+    }
+
+    [TargetRpc]
+    public void RpcRescan(NetworkConnection target)
+    {
+        scanner.target = null;
     }
 
     private IEnumerator SwapRealities(Vector3 position, Quaternion rotation, Quaternion lookRotation)

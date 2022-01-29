@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6467399729118008263}
   - component: {fileID: 6467399729118008281}
   - component: {fileID: 6467399729118008280}
-  m_Layer: 0
-  m_Name: Character
+  m_Layer: 7
+  m_Name: _Character Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6467399729118008259}
-  m_LocalRotation: {x: 0, y: -0.06611272, z: -0, w: 0.9978122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.3199979, y: 0.991, z: 11.420002}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 
+  m_AssetId: e88e635944f18154ca00e50069ff719f
   hasSpawned: 0
 --- !u!114 &6467399729118008280
 MonoBehaviour:
@@ -185,7 +185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6467399729321461148
 Transform:
   m_ObjectHideFlags: 0
