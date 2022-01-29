@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Events;
+using Mirror;
 
-public class Interactable : MonoBehaviour
+public class Interactable : NetworkBehaviour
 {    
     private Renderer[] renderers = null;
     private Dictionary<Renderer, Material[]> defaultMats = new Dictionary<Renderer, Material[]>();
@@ -56,7 +57,14 @@ public class Interactable : MonoBehaviour
         Tooltipper.Instance.HideTip(TooltipType.Interactable, tooltipMessage);
     }
 
+    [Server]
     public virtual void DoInteract(uPlayer player)
+    {
+        RpcTriggerInteract();
+    }
+
+    [ClientRpc]
+    private void RpcTriggerInteract()
     {
         InteractTriggered?.Invoke();
     }

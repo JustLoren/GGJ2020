@@ -25,13 +25,8 @@ public class Inventory : NetworkBehaviour
         }
     }
 
+    [Server]
     public void SetItem(string key)
-    {
-        CmdSetItem(key);
-    }
-
-    [Command]
-    public void CmdSetItem(string key)
     {
         heldItemKey = key;
     }
