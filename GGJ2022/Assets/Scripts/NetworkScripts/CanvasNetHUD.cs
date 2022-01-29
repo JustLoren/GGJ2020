@@ -10,7 +10,7 @@ public class CanvasNetHUD : MonoBehaviour
 	public GameObject PanelStart;
 	public GameObject PanelStop;
 
-	public Button buttonHost, buttonServer, buttonClient, buttonStop;
+	public Button buttonHost,  buttonClient, buttonStop;
 
 	public InputField inputFieldAddress;
 
@@ -26,7 +26,6 @@ public class CanvasNetHUD : MonoBehaviour
 
         //Make sure to attach these Buttons in the Inspector
         buttonHost.onClick.AddListener(ButtonHost);
-        buttonServer.onClick.AddListener(ButtonServer);
         buttonClient.onClick.AddListener(ButtonClient);
         buttonStop.onClick.AddListener(ButtonStop);
 
@@ -46,11 +45,7 @@ public class CanvasNetHUD : MonoBehaviour
         SetupCanvas();
     }
 
-    public void ButtonServer()
-    {
-        NetworkManager.singleton.StartServer();
-        SetupCanvas();
-    }
+    
 
     public void ButtonClient()
     {
