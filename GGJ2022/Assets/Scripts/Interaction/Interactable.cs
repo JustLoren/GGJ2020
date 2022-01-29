@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {    
@@ -10,6 +11,10 @@ public class Interactable : MonoBehaviour
     private Dictionary<Renderer, Material[]> highlightMats = new Dictionary<Renderer, Material[]>();
     public Material highlight;
     public string tooltipMessage = "Press E to Pickup";
+
+    [HideInInspector]
+    public UnityEvent<uPlayer> Interact;    
+    public UnityEvent InteractTriggered;
 
     private bool _lit = false;
 
@@ -37,7 +42,7 @@ public class Interactable : MonoBehaviour
         Tooltipper.Instance.ShowTip(TooltipType.Interactable, tooltipMessage);
     }
 
-    public void Deselect(uPlayer player)
+    public void Deselect()
     {
         if (!_lit) return;
         _lit = false;
@@ -46,5 +51,16 @@ public class Interactable : MonoBehaviour
             renderer.materials = defaultMats[renderer];
 
         Tooltipper.Instance.HideTip(TooltipType.Interactable, tooltipMessage);
+    }
+
+    public void DoInteract(uPlayer player)
+    {
+        Interact?.Invoke(player);
+        InteractTriggered?.Invoke();
+    }
+
+    private void OnDestroy()
+    {        
+        Deselect();
     }
 }

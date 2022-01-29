@@ -34,7 +34,7 @@ public class ScanForInteractable : MonoBehaviour
     private void SwapTarget(uPlayer player, Interactable newTarget)
     {
         if (target != null)        
-            target.Deselect(player);
+            target.Deselect();
 
         target = newTarget;
 
