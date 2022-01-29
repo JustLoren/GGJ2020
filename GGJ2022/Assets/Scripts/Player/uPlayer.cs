@@ -6,7 +6,8 @@ using Mirror;
 public class uPlayer : NetworkBehaviour
 {
     private ScanForInteractable scanner;
-    private StarterAssets.StarterAssetsInputs input;    
+    private StarterAssets.StarterAssetsInputs input;
+    public Inventory inventory;
 
     private void Start()
     {
@@ -25,5 +26,10 @@ public class uPlayer : NetworkBehaviour
                 scanner.target.DoInteract(this);
             }
         }
+    }
+
+    public void AttemptPickup(Pickup item)
+    {
+
     }
 }
