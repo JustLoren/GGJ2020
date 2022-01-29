@@ -73,11 +73,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008263, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: m_Size.x
-      value: 57.26
+      value: 107.57
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008263, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: m_Size.y
-      value: 51.57
+      value: 79.6
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008263, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: m_Center.x
@@ -97,11 +97,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: initialMessage
-      value: Skreeeeee!!!
+      value: Please step away from my treasures.
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: speechIconName
-      value: possum
+      value: Possum
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: wantsYourItemMessage
