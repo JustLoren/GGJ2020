@@ -211,6 +211,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Pickup
+  Interact:
+    m_PersistentCalls:
+      m_Calls: []
+  InteractTriggered:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &373281815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373281813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def0fd67562187e499f6f151c24e9459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &542508511
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -127, y: 63}
+  m_AnchoredPosition: {x: -127, y: 122}
   m_SizeDelta: {x: 290, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1712019568
@@ -1139,8 +1157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127, y: -88}
-  m_SizeDelta: {x: 1380, y: 610}
+  m_AnchoredPosition: {x: 127, y: -147}
+  m_SizeDelta: {x: 1368, y: 1161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088176372
 MonoBehaviour:
