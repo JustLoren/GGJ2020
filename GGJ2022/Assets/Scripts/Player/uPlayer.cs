@@ -29,7 +29,7 @@ public class uPlayer : NetworkBehaviour
 
             if (input.interact && scanner.target != null)
             {
-                scanner.target.DoInteract(this);
+                CmdDoInteract(scanner.target.gameObject);                
             }
 
             input.interact = false;
@@ -43,6 +43,13 @@ public class uPlayer : NetworkBehaviour
                 input.swapPlaces = false;
             }
         }
+    }
+
+    [Command]
+    private void CmdDoInteract(GameObject interactableObj)
+    {
+        var interactable = interactableObj.GetComponent<Interactable>();
+        interactable.DoInteract(this);
     }
 
     [Command]
