@@ -58,6 +58,7 @@ public class Tooltipper : MonoBehaviour
 
 public enum TooltipType
 {
-    Interactable
+    Interactable,
+    DesireSwap,
 }
 
