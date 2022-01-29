@@ -25,13 +25,13 @@ public class Inventory : NetworkBehaviour
         }
     }
 
-    public void GrabItem(string key)
+    public void SetItem(string key)
     {
-        CmdGrabItem(key);
+        CmdSetItem(key);
     }
 
     [Command]
-    public void CmdGrabItem(string key)
+    public void CmdSetItem(string key)
     {
         heldItemKey = key;
     }

@@ -74,6 +74,7 @@ namespace StarterAssets
 		
 		private bool IsCurrentDeviceMouse => _playerInput.currentControlScheme == "KeyboardMouse";
 
+		public bool movementFrozen = false;
 		private bool _initted = false;
         private void Init()
         {
@@ -132,6 +133,7 @@ namespace StarterAssets
 
 		private void Update()
 		{
+			if (movementFrozen) return;
 			JumpAndGravity();
 			GroundedCheck();
 			Move();			

@@ -10,10 +10,8 @@ public class Interactable : MonoBehaviour
     private Dictionary<Renderer, Material[]> defaultMats = new Dictionary<Renderer, Material[]>();
     private Dictionary<Renderer, Material[]> highlightMats = new Dictionary<Renderer, Material[]>();
     public Material highlight;
-    public string tooltipMessage = "Press E to Pickup";
-
-    [HideInInspector]
-    public UnityEvent<uPlayer> Interact;    
+    public string tooltipMessage = "Press E to Pickup";    
+   
     public UnityEvent InteractTriggered;
 
     private bool _lit = false;
@@ -28,6 +26,11 @@ public class Interactable : MonoBehaviour
             mats.Add(highlight);
             highlightMats.Add(renderer, mats.ToArray());
         }
+    }
+
+    public virtual bool Available(uPlayer player)
+    {
+        return true;
     }
 
     public void Select(uPlayer player)
@@ -53,9 +56,8 @@ public class Interactable : MonoBehaviour
         Tooltipper.Instance.HideTip(TooltipType.Interactable, tooltipMessage);
     }
 
-    public void DoInteract(uPlayer player)
+    public virtual void DoInteract(uPlayer player)
     {
-        Interact?.Invoke(player);
         InteractTriggered?.Invoke();
     }
 

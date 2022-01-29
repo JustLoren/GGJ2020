@@ -12,6 +12,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool interact;
+		public bool swapPlaces;
 		public bool sprint;
 
 		[Header("Movement Settings")]
@@ -42,6 +43,11 @@ namespace StarterAssets
 			JumpInput(value.isPressed);
 		}
 
+		public void OnSwapPlaces(InputValue value)
+        {
+			SwapPlacesInput(value.isPressed);
+        }
+
 		public void OnInteract(InputValue value)
         {
 			InteractInput(value.isPressed);
@@ -69,6 +75,11 @@ namespace StarterAssets
 		public void InteractInput(bool newInteractState)
         {
 			interact = newInteractState;
+        }
+
+		public void SwapPlacesInput(bool newSwapPlacesState)
+        {
+			swapPlaces = newSwapPlacesState;
         }
 
 		public void JumpInput(bool newJumpState)

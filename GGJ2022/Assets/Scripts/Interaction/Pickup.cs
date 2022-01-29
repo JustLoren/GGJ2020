@@ -1,36 +1,26 @@
 ﻿using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class Pickup : Interactable
 {
     public string key;
-    private Interactable interactable;
-    private void Start()
+
+    public override bool Available(uPlayer player)
     {
-        interactable = GetComponent<Interactable>();
-        if (interactable != null)
-        {
-            interactable.Interact.AddListener(DoPickup);
-        }
+        return string.IsNullOrWhiteSpace(player.inventory.heldItemKey);
     }
 
-    private void OnDestroy()
-    {
-        if (interactable != null)
-        {
-            interactable.Interact.RemoveListener(DoPickup);
-        }
-    }
-
-    public void DoPickup(uPlayer player)
+    public override void DoInteract(uPlayer player)
     {
         if (!player.inventory.CanPickup())
             return; //TODO: Warn the player that they cannot pick it up
 
-        player.inventory.GrabItem(this.key);
+        player.inventory.SetItem(this.key);
 
         Debug.Log($"{player.name} picked up {this.name} on frame {Time.frameCount}");
-        
+
         Destroy(this.gameObject);
-    }    
+
+        base.DoInteract(player);
+    }
 }
 

@@ -35,10 +35,10 @@ public class ScanForInteractable : MonoBehaviour
     {
         if (target != null)        
             target.Deselect();
-
+        
         target = newTarget;
 
-        if (target != null)
+        if (target != null && target.Available(player))
             target.Select(player);
     }
     
