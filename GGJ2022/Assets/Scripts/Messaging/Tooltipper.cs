@@ -31,6 +31,7 @@ public class Tooltipper : MonoBehaviour
         public TooltipType type;
         public GameObject parentObj;
         public TMPro.TextMeshProUGUI textObj;
+        public List<GameObject> characters = new List<GameObject>();
     }
 
     public List<TooltipConfig> tooltips = new List<TooltipConfig>();
@@ -50,6 +51,24 @@ public class Tooltipper : MonoBehaviour
             tip.parentObj.SetActive(false);
     }
 
+    public void ShowSpeech(Character source, string message)
+    {
+        var tip = GetConfig(TooltipType.Speech);
+
+        tip.textObj.text = message;
+        tip.parentObj.SetActive(true);
+        foreach(var c in tip.characters)
+        {            
+            c.SetActive(c.name == source.speechIconName);
+        }
+    }
+
+    public void HideSpeech(Character source)
+    {
+        var tip = GetConfig(TooltipType.Speech);
+        tip.parentObj.SetActive(false);
+    }
+
     private TooltipConfig GetConfig(TooltipType type)
     {
         return tooltips.Single(t => t.type == type);
@@ -60,5 +79,6 @@ public enum TooltipType
 {
     Interactable,
     DesireSwap,
+    Speech,
 }
 

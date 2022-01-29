@@ -15,7 +15,7 @@ public class Interactable : NetworkBehaviour
    
     public UnityEvent InteractTriggered;
 
-    private bool _lit = false;
+    protected bool _lit = false;
 
     private void Start()
     {
@@ -34,7 +34,7 @@ public class Interactable : NetworkBehaviour
         return true;
     }
 
-    public void Select(uPlayer player)
+    public virtual void Select(uPlayer player)
     {
         if (_lit) return;
 
@@ -46,7 +46,7 @@ public class Interactable : NetworkBehaviour
         Tooltipper.Instance.ShowTip(TooltipType.Interactable, tooltipMessage);
     }
 
-    public void Deselect()
+    public virtual void Deselect()
     {
         if (!_lit) return;
         _lit = false;
