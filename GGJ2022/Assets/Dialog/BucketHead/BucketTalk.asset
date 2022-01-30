@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d335d8f9a35953c4dbf861c33b880fa9, type: 3}
-  m_Name: TooClose
+  m_Name: BucketTalk
   m_EditorClassIdentifier: 
-  finalText: 'GO AWAY THEY''RE MINE! '
+  finalText: 'Man, you must be really good at escaping here if they go through all
+    this just to ground you. Even I know you''re good at getting through those faceplates!
+    A little scary if you ask me... '
