@@ -7,6 +7,7 @@ public class Character : Interactable
 {
     public string speechIconName;
     public string keyNeeded;
+    public string keyGiven;
     public SpriteRenderer spriteRenderer;
 
     public Event initialMessage;
@@ -29,7 +30,7 @@ public class Character : Interactable
         if (player.inventory.heldItemKey == keyNeeded)
         {
             player.RpcRescan(player.netIdentity.connectionToClient);
-            player.inventory.SetItem("");
+            player.inventory.SetItem(keyGiven);
             missionFulfilled = true;
             base.DoInteract(player);
         }

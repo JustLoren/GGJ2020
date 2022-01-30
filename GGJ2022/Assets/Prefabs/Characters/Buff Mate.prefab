@@ -56,6 +56,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
+      propertyPath: keyGiven
+      value: Clippers
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: hasItemMessage
       value: 
       objectReference: {fileID: 11400000, guid: a8f0fe0d6da08594f9a932497d3eec2e, type: 2}

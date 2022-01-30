@@ -6,7 +6,8 @@ public class ScanForInteractable : MonoBehaviour
 {
     public Transform scanSource;
     public float scanDistance = 2f;
-    public LayerMask targetLayer;
+    public LayerMask collisionLayers;
+    public int targetLayer;
     public Interactable target = null;
 
     public void Scan(uPlayer player)
@@ -14,15 +15,18 @@ public class ScanForInteractable : MonoBehaviour
         var ray = new Ray(scanSource.position, scanSource.forward);
         RaycastHit hit;
         Debug.DrawRay(ray.origin, ray.direction, Color.red);
-        if (Physics.Raycast(ray, out hit, scanDistance, targetLayer.value, QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(ray, out hit, scanDistance, collisionLayers.value, QueryTriggerInteraction.Collide))
         {
-            Debug.DrawLine(ray.origin, hit.point, Color.green);
-            var interactable = hit.transform.GetComponent<Interactable>();
-            if (interactable != null)
+            if (hit.collider.gameObject.layer == targetLayer)
             {
-                if (interactable != target)
-                    SwapTarget(player, interactable);
-                return;
+                Debug.DrawLine(ray.origin, hit.point, Color.green);
+                var interactable = hit.transform.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    if (interactable != target)
+                        SwapTarget(player, interactable);
+                    return;
+                }
             }
         } else
         {

@@ -84,8 +84,12 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
-      propertyPath: keyNeeded
+      propertyPath: keyGiven
       value: Toothbrush
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
+      propertyPath: keyNeeded
+      value: MusicBox
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: hasItemMessage
