@@ -18,7 +18,8 @@ public class Pickup : Interactable
 
         Debug.Log($"{player.name} picked up {this.name} on frame {Time.frameCount}");
 
-        Destroy(this.gameObject);
+        this.gameObject.SetActive(false);
+        Destroy(this.gameObject, 2f);
 
         base.DoInteract(player);
     }
