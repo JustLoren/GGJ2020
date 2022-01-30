@@ -327,9 +327,8 @@ GameObject:
   - component: {fileID: 1059703339327046656}
   - component: {fileID: 1059703339327046686}
   - component: {fileID: 1059703339327046657}
-  - component: {fileID: 7836335255232637198}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CharacterText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +341,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059703339327046659}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -352,7 +351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42.6, y: 33.5}
+  m_AnchoredPosition: {x: 42.599995, y: 33.5}
   m_SizeDelta: {x: 200, y: -69.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1059703339327046686
@@ -410,11 +409,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 40
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 50
+  m_fontSizeMin: 40
   m_fontSizeMax: 80
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -452,25 +451,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7836335255232637198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059703339327046659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 350672c11cde1dd419096f2a582c5e6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logTextBox: {fileID: 1059703339327046657}
-  actualEvent: {fileID: 0}
-  pauseInfo:
-    dotPause: 0
-    commaPause: 0
-    spacePause: 0
-    normalPause: 0
 --- !u!1 &1059703339458993242
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,8 +779,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 461.11813, y: 47.681}
-  m_SizeDelta: {x: 783.213, y: 454.376}
+  m_AnchoredPosition: {x: -0.039398, y: 47.681}
+  m_SizeDelta: {x: 2627.8, y: 454.376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1059703340193115645
 CanvasRenderer:
@@ -1269,7 +1249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1723980557620504426
 RectTransform:
   m_ObjectHideFlags: 0

@@ -70,11 +70,11 @@ PrefabInstance:
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: hasItemMessage
       value: 
-      objectReference: {fileID: 11400000, guid: 3cae6f84d65567a43b515523050441cd, type: 2}
+      objectReference: {fileID: 11400000, guid: 6e622c96df88d804b852f2b2cefc343b, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: initialMessage
       value: 
-      objectReference: {fileID: 11400000, guid: 3cae6f84d65567a43b515523050441cd, type: 2}
+      objectReference: {fileID: 11400000, guid: 6e622c96df88d804b852f2b2cefc343b, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: speechIconName
       value: Bucket Head
@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: wantsYourItemMessage
       value: 
-      objectReference: {fileID: 11400000, guid: 3cae6f84d65567a43b515523050441cd, type: 2}
+      objectReference: {fileID: 11400000, guid: 6e622c96df88d804b852f2b2cefc343b, type: 2}
     - target: {fileID: 6467399729118008281, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: sceneId
       value: 0
