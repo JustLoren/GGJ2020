@@ -90,11 +90,11 @@ PrefabInstance:
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: hasItemMessage
       value: 
-      objectReference: {fileID: 11400000, guid: a8f0fe0d6da08594f9a932497d3eec2e, type: 2}
+      objectReference: {fileID: 11400000, guid: 7e6588a73f6978543ab6af00eeaa9002, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: initialMessage
       value: 
-      objectReference: {fileID: 11400000, guid: f8657d54226176446b54d4850cc32558, type: 2}
+      objectReference: {fileID: 11400000, guid: 19578d4edfc92ae41be2be5ad7e98f98, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: speechIconName
       value: Pirate Person
@@ -102,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: wantsYourItemMessage
       value: 
-      objectReference: {fileID: 11400000, guid: 5921ea81760478541bdd20445821c0fb, type: 2}
+      objectReference: {fileID: 11400000, guid: ac41ec24216c6c447a8926405fdf7c36, type: 2}
     - target: {fileID: 6467399729118008281, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: sceneId
       value: 0

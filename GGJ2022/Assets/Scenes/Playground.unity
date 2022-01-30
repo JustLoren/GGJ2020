@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 218339169}
   - component: {fileID: 218339171}
   - component: {fileID: 218339170}
+  - component: {fileID: 218339172}
   m_Layer: 7
   m_Name: D-JailCellCrowBar.001 (1)
   m_TagString: Untagged
@@ -289,6 +290,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218339168}
   m_Mesh: {fileID: 1165077456702157518, guid: 438e7709d4256c742ad0b522b8e37549, type: 3}
+--- !u!114 &218339172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218339168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b660eef403ee70146bb785b093446e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5725846181880519302, guid: 0007a67c29c67094e85c52ba499a02c8, type: 3}
+  isNetworkSpawn: 1
 --- !u!1001 &373281812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1871,6 +1886,7 @@ GameObject:
   - component: {fileID: 1502134025}
   - component: {fileID: 1502134029}
   - component: {fileID: 1502134030}
+  - component: {fileID: 1502134031}
   m_Layer: 7
   m_Name: D-JailCellDoor.001 (1)
   m_TagString: Untagged
@@ -2008,7 +2024,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1502134031}
+        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
+        m_MethodName: SpawnInPlace
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 218339172}
+        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
+        m_MethodName: SpawnInPlace
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   keyNeeded: Clippers
+--- !u!114 &1502134031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502134023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b660eef403ee70146bb785b093446e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 35560069629714156, guid: 96bfd63315e632c419be092e77233f91, type: 3}
+  isNetworkSpawn: 0
 --- !u!1001 &1568952422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2491,9 +2545,6 @@ GameObject:
   - component: {fileID: 2057275898}
   - component: {fileID: 2057275902}
   - component: {fileID: 2057275901}
-  - component: {fileID: 2057275900}
-  - component: {fileID: 2057275899}
-  - component: {fileID: 2057275903}
   m_Layer: 7
   m_Name: D-JailCellLock.001 (1)
   m_TagString: Untagged
@@ -2516,43 +2567,6 @@ Transform:
   m_Father: {fileID: 1502134024}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2057275899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057275897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04bfa9929b11cc2499dc799483087ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
-  tooltipMessage: Press E to Pickup
-  InteractTriggered:
-    m_PersistentCalls:
-      m_Calls: []
-  keyNeeded: Blowtorch
---- !u!114 &2057275900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057275897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 1923767147
-  serverOnly: 0
-  visible: 0
-  m_AssetId: 
-  hasSpawned: 0
 --- !u!23 &2057275901
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2603,26 +2617,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057275897}
   m_Mesh: {fileID: -2516351008965249705, guid: 438e7709d4256c742ad0b522b8e37549, type: 3}
---- !u!95 &2057275903
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057275897}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2088176370 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1059703339204844284, guid: 0e77353ed61caca439ad8500b5aec82b, type: 3}
