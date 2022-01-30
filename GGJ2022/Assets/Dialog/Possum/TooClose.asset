@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d335d8f9a35953c4dbf861c33b880fa9, type: 3}
   m_Name: TooClose
   m_EditorClassIdentifier: 
-  finalText: Please step away from my treasure
+  finalText: "GO AWAY THEY'RE MINE! \r\n\n"

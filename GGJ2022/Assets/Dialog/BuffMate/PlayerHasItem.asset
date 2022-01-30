@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d335d8f9a35953c4dbf861c33b880fa9, type: 3}
   m_Name: PlayerHasItem
   m_EditorClassIdentifier: 
-  finalText: That's a nice box you got there
+  finalText: 'I forgot how good non-rotten fruit is.
+
+'
