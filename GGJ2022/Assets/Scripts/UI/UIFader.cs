@@ -31,7 +31,7 @@ public class UIFader : MonoBehaviour
 
     private void Start()
     {
-        HideCurtain();
+        //HideCurtain();
     }
 
     public void ShowCurtain()
