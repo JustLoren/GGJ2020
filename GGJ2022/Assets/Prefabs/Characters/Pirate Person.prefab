@@ -89,20 +89,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: hasItemMessage
-      value: TY for the shank, ya loser.
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 11400000, guid: a8f0fe0d6da08594f9a932497d3eec2e, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: initialMessage
-      value: Toothbrush plz
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 11400000, guid: f8657d54226176446b54d4850cc32558, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: speechIconName
       value: Pirate Person
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: wantsYourItemMessage
-      value: I really like that "toothbrush"
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 11400000, guid: 5921ea81760478541bdd20445821c0fb, type: 2}
     - target: {fileID: 6467399729118008281, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: sceneId
       value: 0

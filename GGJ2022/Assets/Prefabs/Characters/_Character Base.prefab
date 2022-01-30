@@ -165,9 +165,9 @@ MonoBehaviour:
   speechIconName: 
   keyNeeded: Box
   spriteRenderer: {fileID: 6467399729118008260}
-  initialMessage: I want a box.
-  wantsYourItemMessage: That's a nice box you got there.
-  hasItemMessage: Thanks for the box.
+  initialMessage: {fileID: 0}
+  wantsYourItemMessage: {fileID: 0}
+  hasItemMessage: {fileID: 0}
   missionFulfilled: 0
 --- !u!1 &6467399729321461147
 GameObject:

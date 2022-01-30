@@ -24,6 +24,7 @@ public class Tooltipper : MonoBehaviour
             Instance = null;
     }
     #endregion
+    public EventController eventController;
 
     [System.Serializable]
     public class TooltipConfig
@@ -51,11 +52,11 @@ public class Tooltipper : MonoBehaviour
             tip.parentObj.SetActive(false);
     }
 
-    public void ShowSpeech(Character source, string message)
+    public void ShowSpeech(Character source, Event textEvent)
     {
         var tip = GetConfig(TooltipType.Speech);
 
-        tip.textObj.text = message;
+        eventController.setText(textEvent);
         tip.parentObj.SetActive(true);
         foreach(var c in tip.characters)
         {            
