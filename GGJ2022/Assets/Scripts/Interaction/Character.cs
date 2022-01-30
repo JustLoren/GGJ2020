@@ -9,9 +9,9 @@ public class Character : Interactable
     public string keyNeeded;
     public SpriteRenderer spriteRenderer;
 
-    public string initialMessage = "I want an apple.";
-    public string wantsYourItemMessage = "That's a nice apple you got there.";
-    public string hasItemMessage = "Thanks for the apple";
+    public Event initialMessage;
+    public Event wantsYourItemMessage;
+    public Event hasItemMessage ;
 
     [SyncVar(hook = nameof(UpdateMissionFulfilled))]
     public bool missionFulfilled = false;
@@ -50,7 +50,7 @@ public class Character : Interactable
 
         _lit = true;
 
-        string text = "";
+        Event text;
         if (missionFulfilled)
             text = hasItemMessage;
         else if (!string.IsNullOrWhiteSpace(keyNeeded) && player.inventory.heldItemKey == keyNeeded)
@@ -58,6 +58,6 @@ public class Character : Interactable
         else
             text = initialMessage;
 
-        Tooltipper.Instance.ShowSpeech(this, text);        
+        Tooltipper.Instance.ShowSpeech(this,  text);        
     }
 }

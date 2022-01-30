@@ -93,20 +93,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: hasItemMessage
-      value: Skree :)
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cae6f84d65567a43b515523050441cd, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: initialMessage
-      value: Please step away from my treasures.
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cae6f84d65567a43b515523050441cd, type: 2}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: speechIconName
       value: Possum
       objectReference: {fileID: 0}
     - target: {fileID: 6467399729118008280, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: wantsYourItemMessage
-      value: Skree ?
-      objectReference: {fileID: 0}
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cae6f84d65567a43b515523050441cd, type: 2}
     - target: {fileID: 6467399729118008281, guid: e88e635944f18154ca00e50069ff719f, type: 3}
       propertyPath: sceneId
       value: 0
