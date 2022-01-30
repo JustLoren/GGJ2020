@@ -14,6 +14,7 @@ namespace StarterAssets
 		public bool interact;
 		public bool swapPlaces;
 		public bool sprint;
+		public bool exit;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -37,6 +38,11 @@ namespace StarterAssets
 				LookInput(value.Get<Vector2>());
 			}
 		}
+
+		public void OnExit(InputValue value)
+        {
+			ExitInput(value.isPressed);
+        }
 
 		public void OnJump(InputValue value)
 		{
@@ -66,6 +72,11 @@ namespace StarterAssets
 		{
 			move = newMoveDirection;
 		} 
+
+		public void ExitInput(bool newExitState)
+        {
+			exit = newExitState;
+        }
 
 		public void LookInput(Vector2 newLookDirection)
 		{

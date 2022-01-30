@@ -24,34 +24,43 @@ public class uPlayer : NetworkBehaviour
 
     private void Update()
     {
-        if (isLocalPlayer && !gameOver)
+        if (isLocalPlayer)
         {
-            scanner.Scan(this);
-
-            if (input.interact && scanner.target != null)
+            if (!gameOver)
             {
-                CmdDoInteract(scanner.target.gameObject);
-                if (scanner.target.triggersGameEnd)
+                scanner.Scan(this);
+
+                if (input.interact && scanner.target != null)
                 {
-                    var fps = GetComponent<StarterAssets.FirstPersonController>();
-                    fps.movementFrozen = true;
+                    CmdDoInteract(scanner.target.gameObject);
+                    if (scanner.target.triggersGameEnd)
+                    {
+                        var fps = GetComponent<StarterAssets.FirstPersonController>();
+                        fps.movementFrozen = true;
 
-                    gameOver = true;
+                        gameOver = true;
 
-                    //Game over for me!
-                    UIFader.Instance.ShowCredits(input);
+                        //Game over for me!
+                        UIFader.Instance.ShowCredits(input);
+                    }
+                }
+
+                input.interact = false;
+
+                if (input.swapPlaces && !gameOver)
+                {
+                    if (!wantsToSwap)
+                    {
+                        CmdDoSwap();
+                    }
+                    input.swapPlaces = false;
                 }
             }
 
-            input.interact = false;
-            
-            if (input.swapPlaces && !gameOver)
+            if (input.exit)
             {
-                if (!wantsToSwap)
-                {
-                    CmdDoSwap();
-                }
-                input.swapPlaces = false;
+                NetworkManager.singleton.StopHost();
+                input.exit = false;
             }
         }
     }
