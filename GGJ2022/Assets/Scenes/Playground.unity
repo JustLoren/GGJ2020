@@ -473,6 +473,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4016556780283402033, guid: ee966eb95b2d9f340bd3e7e1dce633e0, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016556780283402033, guid: ee966eb95b2d9f340bd3e7e1dce633e0, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016556780283402033, guid: ee966eb95b2d9f340bd3e7e1dce633e0, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016556780283402033, guid: ee966eb95b2d9f340bd3e7e1dce633e0, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4016556780283402046, guid: ee966eb95b2d9f340bd3e7e1dce633e0, type: 3}
       propertyPath: sceneId
       value: 343412680
@@ -513,6 +529,10 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 60889539378096551}
+    - target: {fileID: 8064271538464400906, guid: ee966eb95b2d9f340bd3e7e1dce633e0, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1898080632}
     - target: {fileID: 8064271538464400907, guid: ee966eb95b2d9f340bd3e7e1dce633e0, type: 3}
       propertyPath: sceneId
       value: 1406250715
@@ -1383,6 +1403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6d8e25e4658934e80402aa3b06d239, type: 3}
+--- !u!1 &1898080632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 610226544072056231, guid: 3e6d8e25e4658934e80402aa3b06d239, type: 3}
+  m_PrefabInstance: {fileID: 1898080631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2044091733
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,7 +11,9 @@ public class Interactable : NetworkBehaviour
     private Dictionary<Renderer, Material[]> defaultMats = new Dictionary<Renderer, Material[]>();
     private Dictionary<Renderer, Material[]> highlightMats = new Dictionary<Renderer, Material[]>();
     public Material highlight;
-    public string tooltipMessage = "Press E to Pickup";    
+    public string tooltipMessage = "Press E to Pickup";
+
+    public bool triggersGameEnd = false;
    
     public UnityEvent InteractTriggered;
 
@@ -53,8 +55,8 @@ public class Interactable : NetworkBehaviour
 
         foreach (var renderer in renderers)
             renderer.materials = defaultMats[renderer];
-
-        Tooltipper.Instance.HideTip(TooltipType.Interactable, tooltipMessage);
+                
+        Tooltipper.Instance?.HideTip(TooltipType.Interactable, tooltipMessage);
     }
 
     [Server]

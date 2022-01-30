@@ -298,6 +298,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Pickup
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -528,6 +529,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to get Torch
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls: []
@@ -679,6 +681,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Pickup
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls: []
@@ -820,6 +823,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Cut Lock
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -1006,6 +1010,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: 025646b1e7c39714e9391235b2370d97, type: 2}
   tooltipMessage: Press E to Place Crate
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -1295,6 +1300,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Open Panel
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -1574,6 +1580,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Open
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -1885,6 +1892,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Cut Wires
+  triggersGameEnd: 1
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -2398,6 +2406,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Pickup
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls: []
@@ -2664,6 +2673,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate Person
       objectReference: {fileID: 0}
+    - target: {fileID: 6365733760677477558, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365733760677477558, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365733760677477558, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365733760677477558, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365733760677477558, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365733760677477558, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365733760677477558, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
+      propertyPath: InteractTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6365733760677477559, guid: 4d15e800919d43f4cbd59ba25642caaa, type: 3}
       propertyPath: sceneId
       value: 0
@@ -2862,6 +2899,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Smash Glass
+  triggersGameEnd: 0
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -2978,6 +3016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: D-DoorLock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ddbc29096d227fc4f9a83688f45b33f9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddbc29096d227fc4f9a83688f45b33f9, type: 3}
 --- !u!1 &4286517332395141731 stripped
@@ -3019,6 +3061,7 @@ MonoBehaviour:
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
   tooltipMessage: Press E to Force Lock
+  triggersGameEnd: 1
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:

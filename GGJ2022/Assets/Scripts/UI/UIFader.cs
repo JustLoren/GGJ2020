@@ -25,13 +25,32 @@ public class UIFader : MonoBehaviour
     #endregion
 
     public Image curtain;
+    public Image credits;
     public float fadeTime = .5f;
     private float currentAlpha = 1f;
-    private float targetAlpha = 1f;
+    private float targetAlpha = 1f;    
 
     private void Start()
     {
         //HideCurtain();
+    }
+
+    public void ShowCredits(StarterAssets.StarterAssetsInputs inputToWatch)
+    {        
+        ShowCurtain();
+        StartCoroutine(WaitForExit(inputToWatch));
+    }
+
+    private IEnumerator WaitForExit(StarterAssets.StarterAssetsInputs input)
+    {
+        credits.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(fadeTime);
+
+        while (!input.interact)
+            yield return null;
+                
+        Mirror.NetworkManager.singleton.StopHost();
     }
 
     public void ShowCurtain()
@@ -51,6 +70,7 @@ public class UIFader : MonoBehaviour
     {
         currentAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, fadeTime * Time.deltaTime);
         curtain.color = new Color(0, 0, 0, currentAlpha);
+        credits.color = new Color(1, 1, 1, currentAlpha);
         if (Mathf.Approximately(currentAlpha, targetAlpha))
         {
             this.enabled = false;

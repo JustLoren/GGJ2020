@@ -9,6 +9,7 @@ public class uPlayer : NetworkBehaviour
     private StarterAssets.StarterAssetsInputs input;
     public Inventory inventory;
     public Transform cameraObject;
+    private bool gameOver = false;
 
     private void Start()
     {
@@ -23,18 +24,28 @@ public class uPlayer : NetworkBehaviour
 
     private void Update()
     {
-        if (isLocalPlayer)
+        if (isLocalPlayer && !gameOver)
         {
             scanner.Scan(this);
 
             if (input.interact && scanner.target != null)
             {
                 CmdDoInteract(scanner.target.gameObject);
+                if (scanner.target.triggersGameEnd)
+                {
+                    var fps = GetComponent<StarterAssets.FirstPersonController>();
+                    fps.movementFrozen = true;
+
+                    gameOver = true;
+
+                    //Game over for me!
+                    UIFader.Instance.ShowCredits(input);
+                }
             }
 
             input.interact = false;
             
-            if (input.swapPlaces)
+            if (input.swapPlaces && !gameOver)
             {
                 if (!wantsToSwap)
                 {
