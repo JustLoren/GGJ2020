@@ -313,6 +313,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 6976668084033465496}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   key: MilkCrate
 --- !u!1 &3078119878304650212
 GameObject:
@@ -1020,6 +1032,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4016556778948814335}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   keyNeeded: MilkCrate
 --- !u!1 &4016556779407087519
@@ -1860,7 +1884,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   highlight: {fileID: 2100000, guid: b361e9997ceade248a97a594b76ece3f, type: 2}
-  tooltipMessage: Press E to Pickup
+  tooltipMessage: Press E to Cut Wires
   InteractTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -1874,6 +1898,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 808285736}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
           m_BoolArgument: 0
         m_CallState: 2
   keyNeeded: Clippers
@@ -1999,6 +2035,8 @@ GameObject:
   - component: {fileID: 5157421643537867170}
   - component: {fileID: 4727633497925437131}
   - component: {fileID: 5681479248734597142}
+  - component: {fileID: 808285736}
+  - component: {fileID: 808285737}
   m_Layer: 0
   m_Name: U-Door
   m_TagString: Untagged
@@ -2014,7 +2052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6308751985883001516}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.5331535, y: 1.5284344, z: -4.8195863}
+  m_LocalPosition: {x: 0.5331535, y: 1.5284344, z: -4.819586}
   m_LocalScale: {x: 52.277916, y: 6.1733103, z: 123.98535}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2071,6 +2109,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &808285736
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6308751985883001516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0fd3f26e070c19d4cadec915ab6cd19b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &808285737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6308751985883001516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999996, y: 0.023880681, z: 0.019999994}
+  m_Center: {x: -0.01, y: -0.0019403422, z: -0.0014285712}
 --- !u!1001 &4016556778492977600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2409,14 +2480,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdaf42b67895416479084cbcb166a1e8, type: 3}
---- !u!4 &3474268046056421408 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdaf42b67895416479084cbcb166a1e8, type: 3}
-  m_PrefabInstance: {fileID: 4016556778942865355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4286517334276743834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cdaf42b67895416479084cbcb166a1e8, type: 3}
+  m_PrefabInstance: {fileID: 4016556778942865355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3474268046056421408 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cdaf42b67895416479084cbcb166a1e8, type: 3}
   m_PrefabInstance: {fileID: 4016556778942865355}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &4016556778942865367
@@ -2481,7 +2552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6365733760677477547, guid: 6038da6639b16ec479d15850c40a422d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.789
+      value: 0.986
       objectReference: {fileID: 0}
     - target: {fileID: 6365733760677477547, guid: 6038da6639b16ec479d15850c40a422d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2747,9 +2818,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d925fd9ac77f00458bae18b6f2e8150, type: 3}
---- !u!23 &2340808293063433623 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9d925fd9ac77f00458bae18b6f2e8150, type: 3}
+--- !u!1 &4286517333284502594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d925fd9ac77f00458bae18b6f2e8150, type: 3}
   m_PrefabInstance: {fileID: 4016556779964399891}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3474268045043197688 stripped
@@ -2757,9 +2828,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d925fd9ac77f00458bae18b6f2e8150, type: 3}
   m_PrefabInstance: {fileID: 4016556779964399891}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4286517333284502594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d925fd9ac77f00458bae18b6f2e8150, type: 3}
+--- !u!23 &2340808293063433623 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9d925fd9ac77f00458bae18b6f2e8150, type: 3}
   m_PrefabInstance: {fileID: 4016556779964399891}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &4016556779964399900

@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d335d8f9a35953c4dbf861c33b880fa9, type: 3}
   m_Name: PlayerHasItem
   m_EditorClassIdentifier: 
-  finalText: 'I forgot how good non-rotten fruit is.
-
-'
+  finalText: Did you get it? I'm so tired of this nasty stuff.
