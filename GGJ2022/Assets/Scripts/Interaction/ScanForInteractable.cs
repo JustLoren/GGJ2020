@@ -40,6 +40,8 @@ public class ScanForInteractable : MonoBehaviour
 
         if (target != null && target.Available(player))
             target.Select(player);
+        else
+            target = null;
     }
     
 }
