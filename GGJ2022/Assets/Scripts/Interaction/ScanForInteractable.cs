@@ -14,7 +14,7 @@ public class ScanForInteractable : MonoBehaviour
         var ray = new Ray(scanSource.position, scanSource.forward);
         RaycastHit hit;
         Debug.DrawRay(ray.origin, ray.direction, Color.red);
-        if (Physics.Raycast(ray, out hit, scanDistance, targetLayer.value, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(ray, out hit, scanDistance, targetLayer.value, QueryTriggerInteraction.Collide))
         {
             Debug.DrawLine(ray.origin, hit.point, Color.green);
             var interactable = hit.transform.GetComponent<Interactable>();
