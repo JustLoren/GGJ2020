@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d335d8f9a35953c4dbf861c33b880fa9, type: 3}
   m_Name: ItemGiven
   m_EditorClassIdentifier: 
-  finalText: 'Thanks for the box
+  finalText: 'Did you get it? I''m so tired of this nasty stuff.
 
 '
